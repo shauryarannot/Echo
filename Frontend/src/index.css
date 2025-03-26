@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% { 
+    text-shadow: 0 0 5px rgba(139, 92, 246, 0.3), 0 0 15px rgba(139, 92, 246, 0.2); 
+  }
+  50% { 
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 0 30px rgba(139, 92, 246, 0.4); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-20px) translateX(10px); }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes bounce-x {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg) translateY(0) translateX(0) scale(1); }
+  50% { transform: rotate(10deg) translateY(-30px) translateX(20px) scale(1.1); }
+  100% { transform: rotate(0deg) translateY(0) translateX(0) scale(1); }
+}
+
+@keyframes wave-slow {
+  0% { transform: rotate(0deg) translateY(0) translateX(0) scale(1); }
+  50% { transform: rotate(-5deg) translateY(-20px) translateX(-10px) scale(1.05); }
+  100% { transform: rotate(0deg) translateY(0) translateX(0) scale(1); }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 15s ease-in-out infinite reverse;
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 3s ease-in-out infinite;
+}
+
+.animate-bounce-x {
+  animation: bounce-x 1s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave 15s ease-in-out infinite;
+}
+
+.animate-wave-slow {
+  animation: wave-slow 20s ease-in-out infinite;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
+}
+
+.shadow-glow-sm {
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+}
+
+/* Add this class to elements you want to animate when they enter the viewport */
+.animate-on-scroll {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
